@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Text;
 using FinalProjectRegistrationBE;
 using FinalProjectRegistrationBLL.Interfaces;
+using FinalProjectRegistrationDAL;
 
 namespace FinalProjectRegistrationBLL
 {
-    class ProposalService : IProposalService
+    public class ProposalService : IProposalService
     {
+        private readonly IDALFacade _facade;
+
+        public ProposalService(IDALFacade facade)
+        {
+            _facade = facade;
+        }
+
         public ProposalBO Create(ProposalBO entity)
         {
             throw new NotImplementedException();
