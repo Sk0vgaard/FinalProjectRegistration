@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FinalProjectRegistration
+namespace FinalProjectRegistrationGUI
 {
     class Program
     {
