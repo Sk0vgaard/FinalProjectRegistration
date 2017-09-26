@@ -18,7 +18,7 @@ namespace FinalProjectRegistrationBLLShould
         [Fact]
         public void GetOne()
         {
-            throw new System.NotImplementedException();
+            Assert.NotNull(_service.Get(0));
         }
         [Fact]
         public void GetAll()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using FinalProjectRegistrationBE;
 using FinalProjectRegistrationBLL.Interfaces;
@@ -23,7 +24,9 @@ namespace FinalProjectRegistrationBLL
 
         public ProposalBO Get(int id)
         {
-            throw new NotImplementedException();
+            var proposal = _facade.Proposals.FirstOrDefault(p => p.Id == id);
+
+            return proposal;
         }
 
         public IList<ProposalBO> GetAll()

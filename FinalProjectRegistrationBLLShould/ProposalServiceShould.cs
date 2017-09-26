@@ -10,8 +10,12 @@ namespace FinalProjectRegistrationBLLShould
 {
     class ProposalServiceShould : IBLLTest
     {
-        private readonly DALFacade _facade = new DALFacade();
-        private readonly ProposalService _service = new ProposalService();
+        private readonly ProposalService _service;
+
+        public ProposalServiceShould()
+        {
+            _service = new ProposalService(new DALFacade());
+        }
 
         [Fact]
         public void GetOne()
