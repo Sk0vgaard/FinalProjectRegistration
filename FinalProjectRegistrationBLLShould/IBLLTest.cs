@@ -5,6 +5,6 @@
         void GetOne();
         void GetAll();
         void CreateOne();
-        void NotCreateOne();
+        void NotCreateOneWithNull();
     }
 }

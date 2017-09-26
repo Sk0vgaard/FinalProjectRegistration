@@ -55,7 +55,7 @@ namespace FinalProjectRegistrationBLLShould
         }
 
         [Fact]
-        public void NotCreateOne()
+        public void NotCreateOneWithNull()
         {
             try
             {
