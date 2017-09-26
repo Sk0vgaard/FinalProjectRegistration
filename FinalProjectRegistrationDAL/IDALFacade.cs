@@ -8,5 +8,6 @@ namespace FinalProjectRegistrationDAL
     {
         IList<ProposalBO> Proposals { get; }
         IList<StudentBO> Students { get; }
+        IList<ProjectGroupBO> ProjectGroups { get; }
     }
 }

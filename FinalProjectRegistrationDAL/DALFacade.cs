@@ -27,21 +27,43 @@ namespace FinalProjectRegistrationDAL
         {
             new StudentBO()
             {
+                Id = 1,
                 Name = "Mock",
                 Email = "Mock",
                 Phone = 123
             },
             new StudentBO()
             {
+                Id = 2,
                 Name = "Mock 2",
                 Email = "Mock",
                 Phone = 123
             },
             new StudentBO()
             {
+                Id = 3,
                 Name = "Mock 3",
                 Email = "Mock",
                 Phone = 123
+            }
+        };
+
+        public IList<ProjectGroupBO> ProjectGroups => new List<ProjectGroupBO>()
+        {
+            new ProjectGroupBO()
+            {
+                Id = 1,
+                Name = "D4FF"
+            },
+            new ProjectGroupBO()
+            {
+                Id = 2,
+                Name = "D4FF 2"
+            },
+            new ProjectGroupBO()
+            {
+                Id = 3,
+                Name = "D4FF 3"
             }
         };
     }

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FinalProjectRegistrationBE\FinalProjectRegistrationBE.csproj" />
+    <ProjectReference Include="..\FinalProjectRegistrationDAL\FinalProjectRegistrationDAL.csproj" />
   </ItemGroup>
 
 </Project>
