@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FinalProjectRegistrationBE\FinalProjectRegistrationBE.csproj" />
+    <ProjectReference Include="..\FinalProjectRegistrationBLL\FinalProjectRegistrationBLL.csproj" />
+    <ProjectReference Include="..\FinalProjectRegistrationDAL\FinalProjectRegistrationDAL.csproj" />
   </ItemGroup>
 
 </Project>
