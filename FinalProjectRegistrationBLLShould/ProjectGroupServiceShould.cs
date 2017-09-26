@@ -31,7 +31,7 @@ namespace FinalProjectRegistrationBLLShould
         }
 
         [Fact]
-        public void NotGetOneWithNonexistingId()
+        public void NotGetOneWithNonExistingId()
         {
             var result = _service.Get(0);
 
