@@ -18,7 +18,13 @@ namespace FinalProjectRegistrationBLL
         }
         public ProjectGroupBO Create(ProjectGroupBO projectGroup)
         {
-            if (projectGroup == null) throw new ArgumentNullException("Argument is null");
+            if (projectGroup == null) throw new ArgumentNullException("Argument is null.");
+
+            foreach (var group in _facade.ProjectGroups)
+            {
+                if(group.StudentIds.Intersect(projectGroup.StudentIds).Any()) throw new InvalidOperationException("One or more students already have a group.");
+            }
+
             _facade.ProjectGroups.Add(projectGroup);
             return projectGroup;
         }
@@ -32,5 +38,6 @@ namespace FinalProjectRegistrationBLL
         {
             return _facade.ProjectGroups;
         }
+
     }
 }
