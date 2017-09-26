@@ -4,6 +4,5 @@ namespace FinalProjectRegistrationBLL.Interfaces
 {
     public interface IProjectGroupService : IService<ProjectGroupBO>
     {
-        
     }
 }

@@ -48,6 +48,13 @@ namespace FinalProjectRegistrationDAL
                 Name = "Mock 3",
                 Email = "Mock",
                 Phone = 123
+            },
+            new StudentBO
+            {
+                Id = 4,
+                Name = "Mock 4",
+                Email = "Mock",
+                Phone = 123
             }
         };
 
@@ -56,17 +63,21 @@ namespace FinalProjectRegistrationDAL
             new ProjectGroupBO()
             {
                 Id = 1,
-                Name = "D4FF"
+                Name = "D4FF",
+                StudentIds = new List<int>{1}
             },
             new ProjectGroupBO()
             {
                 Id = 2,
-                Name = "D4FF 2"
+                Name = "D4FF 2",
+                StudentIds = new List<int>{3}
+
             },
             new ProjectGroupBO()
             {
                 Id = 3,
-                Name = "D4FF 3"
+                Name = "D4FF 3",
+                StudentIds = new List<int>{4}
             }
         };
     }

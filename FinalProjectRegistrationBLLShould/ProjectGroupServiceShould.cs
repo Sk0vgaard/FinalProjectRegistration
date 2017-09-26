@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using FinalProjectRegistrationBE;
 using FinalProjectRegistrationBLL;
 using FinalProjectRegistrationBLL.Interfaces;
@@ -14,7 +15,8 @@ namespace FinalProjectRegistrationBLLShould
         private readonly ProjectGroupBO MockProjectGroup = new ProjectGroupBO()
         {
             Id = 4,
-            Name = "D4FF"
+            Name = "D4FF",
+            StudentIds = new List<int>{2}
         };
 
         public ProjectGroupServiceShould()
@@ -57,15 +59,23 @@ namespace FinalProjectRegistrationBLLShould
         [Fact]
         public void NotCreateOneWithNull()
         {
-            try
-            {
-                _service.Create(null);
-
-            }
-            catch (Exception e)
-            {
-                Assert.IsType<ArgumentNullException>(e);
-            }
+            Assert.Throws<ArgumentNullException>(() => _service.Create(null));
         }
+
+        [Fact]
+        public void HaveStudentsWhenCreated()
+        {
+            var result = _service.Create(MockProjectGroup).StudentIds;
+
+            Assert.NotEmpty(result);
+        }
+
+        [Fact]
+        public void NotHaveStudentsThatAlreadyHaveAGroup()
+        {
+            MockProjectGroup.StudentIds = new List<int>{1, 2};
+            Assert.Throws<InvalidOperationException>(() => _service.Create(MockProjectGroup));
+        }
+
     }
 }
