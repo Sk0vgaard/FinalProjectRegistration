@@ -22,6 +22,11 @@ namespace FinalProjectRegistrationBLLShould
         {
             Assert.NotNull(_service.Get(0));
         }
+        [Fact]
+        public void NotGetOneWithNonExistingId()
+        {
+            throw new NotImplementedException();
+        }
 
         [Fact]
         public void GetAll()
@@ -35,7 +40,7 @@ namespace FinalProjectRegistrationBLLShould
             throw new NotImplementedException();
         }
         [Fact]
-        public void NotCreateOne()
+        public void NotCreateOneWithNull()
         {
             throw new NotImplementedException();
         }
