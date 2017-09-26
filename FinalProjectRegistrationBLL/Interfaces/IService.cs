@@ -5,7 +5,7 @@ namespace FinalProjectRegistrationBLL.Interfaces
 {
     public interface IService<TEntity>
     {
-        TEntity Create(TEntity entity);
+        TEntity Create(TEntity proposal);
 
         TEntity Get(int id);
 

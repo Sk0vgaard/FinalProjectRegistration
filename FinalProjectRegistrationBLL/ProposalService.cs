@@ -17,15 +17,15 @@ namespace FinalProjectRegistrationBLL
             _facade = facade;
         }
 
-        public ProposalBO Create(ProposalBO entity)
+        public ProposalBO Create(ProposalBO proposal)
         {
-            throw new NotImplementedException();
+            _facade.Proposals.Add(proposal);
+            return proposal;
         }
 
         public ProposalBO Get(int id)
         {
             var proposal = _facade.Proposals.FirstOrDefault(p => p.Id == id);
-
             return proposal;
         }
 

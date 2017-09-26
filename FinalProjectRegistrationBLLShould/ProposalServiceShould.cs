@@ -1,4 +1,5 @@
 ﻿using System;
+using FinalProjectRegistrationBE;
 using FinalProjectRegistrationBLL;
 using FinalProjectRegistrationDAL;
 using Xunit;
@@ -7,17 +8,25 @@ namespace FinalProjectRegistrationBLLShould
 {
     public class ProposalServiceShould : IBLLTest
     {
+        private readonly ProposalService _service;
+
         public ProposalServiceShould()
         {
             _service = new ProposalService(new DALFacade());
         }
 
-        private readonly ProposalService _service;
-
         [Fact]
         public void CreateOne()
         {
-            throw new NotImplementedException();
+            var result =_service.Create(
+                new ProposalBO
+                {
+                    Id = 4,
+                    Objectives = "Mock4",
+                    Title = "Mock4"
+                }
+            );
+            Assert.NotNull(result);
         }
 
         [Fact]
@@ -29,7 +38,7 @@ namespace FinalProjectRegistrationBLLShould
         [Fact]
         public void GetOne()
         {
-            Assert.NotNull(_service.Get(0));
+            Assert.NotNull(_service.Get(1));
         }
 
         [Fact]
@@ -41,7 +50,7 @@ namespace FinalProjectRegistrationBLLShould
         [Fact]
         public void NotGetOneWithNonExistingId()
         {
-            throw new NotImplementedException();
+            Assert.Null(_service.Get(0));
         }
     }
 }

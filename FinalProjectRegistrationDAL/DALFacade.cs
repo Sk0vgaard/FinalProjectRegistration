@@ -9,16 +9,19 @@ namespace FinalProjectRegistrationDAL
         {
             new ProposalBO()
             {
+                Id = 1,
                 Title = "Mock",
                 Objectives = "Mock"
             },
             new ProposalBO()
             {
+                Id = 2,
                 Title = "Mock 2",
                 Objectives = "Mock"
             },
             new ProposalBO()
             {
+                Id = 3,
                 Title = "Mock 3",
                 Objectives = "Mock"
             }

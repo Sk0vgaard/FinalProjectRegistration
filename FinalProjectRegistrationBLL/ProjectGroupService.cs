@@ -16,11 +16,11 @@ namespace FinalProjectRegistrationBLL
         {
             _facade = facade;
         }
-        public ProjectGroupBO Create(ProjectGroupBO projectGroup)
+        public ProjectGroupBO Create(ProjectGroupBO proposal)
         {
-            if (projectGroup == null) throw new ArgumentNullException("Argument is null");
-            _facade.ProjectGroups.Add(projectGroup);
-            return projectGroup;
+            if (proposal == null) throw new ArgumentNullException("Argument is null");
+            _facade.ProjectGroups.Add(proposal);
+            return proposal;
         }
 
         public ProjectGroupBO Get(int id)
