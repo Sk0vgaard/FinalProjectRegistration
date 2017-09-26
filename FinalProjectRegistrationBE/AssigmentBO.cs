@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FinalProjectRegistrationBE
 {
-    class AssigmentBO
+    public class AssigmentBO
     {
 
     }

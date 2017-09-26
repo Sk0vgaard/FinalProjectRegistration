@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FinalProjectRegistrationBE
 {
-    class ProposalBO
+    public class ProposalBO
     {
         public string Title { get; set; }
         public string Objectives { get; set; }

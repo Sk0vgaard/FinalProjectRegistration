@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FinalProjectRegistrationBE
 {
-    class ProjectGroupBO
+    public class ProjectGroupBO
     {
         public string name { get; set; }
     }
