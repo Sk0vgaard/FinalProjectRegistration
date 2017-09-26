@@ -19,6 +19,10 @@ namespace FinalProjectRegistrationBLL
 
         public ProposalBO Create(ProposalBO proposal)
         {
+            if (proposal == null)
+            {
+                throw new ArgumentNullException("Proposal is null");
+            }
             _facade.Proposals.Add(proposal);
             return proposal;
         }

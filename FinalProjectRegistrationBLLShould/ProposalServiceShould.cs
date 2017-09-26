@@ -44,7 +44,7 @@ namespace FinalProjectRegistrationBLLShould
         [Fact]
         public void NotCreateOneWithNull()
         {
-            throw new NotImplementedException();
+            Assert.Throws<ArgumentNullException>(() => _service.Create(null));
         }
 
         [Fact]
